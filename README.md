@@ -10,7 +10,11 @@ Hides token effects in FoundryVTT unless hovered.
 
 ## Installation
 
-Copy and paste `https://github.com/Furyspark/foundryvtt_effect-hider/releases/latest/download/module.json` into Foundry's module installation URL field.
+Copy and paste the following into Foundry's module installation URL field.
+
+```bash
+https://github.com/Furyspark/foundryvtt_effect-hider/releases/latest/download/module.json
+```
 
 ## Development
 
