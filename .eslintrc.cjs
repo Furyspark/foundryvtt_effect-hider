@@ -6,19 +6,15 @@
 module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
-    extraFileExtensions: ['.cjs', '.mjs'],
-    sourceType: 'module',
+    extraFileExtensions: [".cjs", ".mjs"],
+    sourceType: "module",
   },
 
   env: {
     browser: true,
   },
 
-  extends: [
-    'eslint:recommended',
-    '@typhonjs-fvtt/eslint-config-foundry.js/0.8.0',
-    'plugin:prettier/recommended',
-  ],
+  extends: ["eslint:recommended", "@typhonjs-fvtt/eslint-config-foundry.js/0.8.0", "plugin:prettier/recommended"],
 
   plugins: [],
 
@@ -28,7 +24,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ['./*.js', './*.cjs', './*.mjs'],
+      files: ["./*.js", "./*.cjs", "./*.mjs"],
       env: {
         node: true,
       },
