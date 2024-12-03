@@ -8,7 +8,15 @@ SPDX-License-Identifier: MIT
 
 Hides token effects in FoundryVTT unless hovered.
 
-## Installation
+## Without this module
+
+![Before](./doc/img/before.webp)
+
+## With this module
+
+![After](./doc/img/after.webm)
+
+# Installation
 
 Copy and paste the following into Foundry's module installation URL field.
 
