@@ -4,13 +4,9 @@ SPDX-FileCopyrightText: 2022 Johannes Loher
 SPDX-License-Identifier: MIT
 -->
 
-# effect-hider
+# Effect Hider
 
-Please add your description here.
-
-## Installation
-
-Please add your installation instructions here.
+Hides token effects in FoundryVTT unless hovered.
 
 ## Development
 
@@ -83,9 +79,4 @@ You can also link to multiple data folders by specifying multiple paths in the
 This project is being developed under the terms of the
 [LIMITED LICENSE AGREEMENT FOR MODULE DEVELOPMENT] for Foundry Virtual Tabletop.
 
-Please add your licensing information here. Add your chosen license as
-`LICENSE` file to the project root and mention it here.  If you don't know which
-license to choose, take a look at [Choose an open source license].
-
 [LIMITED LICENSE AGREEMENT FOR MODULE DEVELOPMENT]: https://foundryvtt.com/article/license/
-[Choose an open source license]: https://choosealicense.com/
