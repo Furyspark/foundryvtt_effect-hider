@@ -14,7 +14,7 @@ Hides token effects in FoundryVTT unless hovered.
 
 ## With this module
 
-![After](./doc/img/after.webm)
+![After](./doc/img/after.gif)
 
 # Installation
 
