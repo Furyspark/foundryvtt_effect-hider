@@ -1,0 +1,38 @@
+{
+  "id": "effect-hider",
+  "title": "Effect Hider",
+  "description": "Hides effect icons from tokens unless hovered",
+  "authors": [
+    {
+      "name": "Valerie Zonfire"
+    }
+  ],
+  "url": "",
+  "license": "MIT",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "scripts": [],
+  "esmodules": [
+    "module/effect-hider.js"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "relationships": {
+    "systems": [],
+    "requires": [],
+    "conflicts": []
+  },
+  "socket": false,
+  "manifest": "",
+  "download": "",
+  "library": false
+}
