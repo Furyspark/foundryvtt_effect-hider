@@ -35,11 +35,15 @@ Hooks.once("ready", async () => {
 // Add any additional hooks if necessary
 Hooks.on("refreshToken", (obj) => {
   if (canvas.tokens.highlightObjects) return;
-  obj.effects.visible = obj.hover;
+  for (const fx of obj.effects.children) {
+    if (fx !== obj.effects.overlay) fx.visible = obj.hover;
+  }
 });
 
 Hooks.on("highlightObjects", (state) => {
   for (const token of canvas.tokens.placeables) {
-    token.effects.visible = state;
+    for (const fx of token.effects.children) {
+      if (fx !== token.effects.overlay) fx.visible = state;
+    }
   }
 });
