@@ -9,7 +9,7 @@
   ],
   "url": "https://github.com/Furyspark/foundryvtt_effect-hider",
   "license": "https://github.com/Furyspark/foundryvtt_effect-hider/blob/main/LICENSE",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
