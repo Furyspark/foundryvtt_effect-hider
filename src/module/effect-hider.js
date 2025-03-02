@@ -14,6 +14,8 @@
  * 					 determines how others may use and modify your module.
  */
 
+import { shouldHideEffectBackground } from "./lib.js";
+
 // Initialize module
 Hooks.once("init", async () => {
   console.log("effect-hider | Initializing effect-hider");
@@ -36,14 +38,18 @@ Hooks.once("ready", async () => {
 Hooks.on("refreshToken", (obj) => {
   if (canvas.tokens.highlightObjects) return;
   for (const fx of obj.effects.children) {
-    if (fx !== obj.effects.overlay) fx.visible = obj.hover;
+    if (fx === obj.effects.overlay) continue; // Skip base overlay
+    if (fx === obj.effects.bg && !shouldHideEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
+    fx.visible = obj.hover;
   }
 });
 
 Hooks.on("highlightObjects", (state) => {
   for (const token of canvas.tokens.placeables) {
     for (const fx of token.effects.children) {
-      if (fx !== token.effects.overlay) fx.visible = state;
+      if (fx === obj.effects.overlay) continue; // Skip base overlay
+      if (fx === obj.effects.bg && !shouldHideEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
+      fx.visible = state;
     }
   }
 });
