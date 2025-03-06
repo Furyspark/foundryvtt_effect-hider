@@ -1,5 +1,5 @@
-import { hasDorakoUX } from "./integration.js";
+import { renderRules } from "./integration.js";
 
-export function shouldHideEffectBackground() {
-  return !hasDorakoUX();
+export function shouldSkipEffectBackground() {
+  return renderRules.skipBackground;
 }
