@@ -25,20 +25,20 @@ Hooks.once("init", async () => {
 });
 
 // Add any additional hooks if necessary
-Hooks.on("refreshToken", (obj) => {
+Hooks.on("refreshToken", (token) => {
   if (canvas.tokens.highlightObjects) return;
-  for (const fx of obj.effects.children) {
-    if (fx === obj.effects.overlay) continue; // Skip base overlay
-    if (fx === obj.effects.bg && shouldSkipEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
-    fx.visible = obj.hover;
+  for (const fx of token.effects.children) {
+    if (fx === token.effects.overlay) continue; // Skip base overlay
+    if (fx === token.effects.bg && shouldSkipEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
+    fx.visible = token.hover;
   }
 });
 
 Hooks.on("highlightObjects", (state) => {
   for (const token of canvas.tokens.placeables) {
     for (const fx of token.effects.children) {
-      if (fx === obj.effects.overlay) continue; // Skip base overlay
-      if (fx === obj.effects.bg && shouldSkipEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
+      if (fx === token.effects.overlay) continue; // Skip base overlay
+      if (fx === token.effects.bg && shouldSkipEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
       fx.visible = state;
     }
   }
