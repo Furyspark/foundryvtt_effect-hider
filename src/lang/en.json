@@ -1,1 +1,10 @@
-{}
+{
+  "EffectHider": {
+    "Settings": {
+      "ShowDuringCombat": {
+        "Name": "Show During Combat",
+        "Hint": "Shows effects as normal while an encounter is active."
+      }
+    }
+  }
+}
