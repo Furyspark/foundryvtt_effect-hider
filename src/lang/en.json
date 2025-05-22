@@ -1,9 +1,14 @@
 {
   "EffectHider": {
     "Settings": {
-      "ShowDuringCombat": {
-        "Name": "Show During Combat",
-        "Hint": "Shows effects as normal while an encounter is active."
+      "HideEffects": {
+        "Name": "Hide Effects",
+        "Hint": "When to hide effects.",
+        "Choices": {
+          "Always": "Always",
+          "WhenNotInCombat": "When not in combat",
+          "Never": "Never"
+        }
       }
     }
   }

@@ -14,9 +14,9 @@
  * 					 determines how others may use and modify your module.
  */
 
-import { setEffectVisibility, isCombatRunning, MODULE_ID } from "./lib.js";
+import { refreshEffectVisibility, MODULE_ID } from "./lib.js";
 import { initializeModuleRules } from "./integration.js";
-import { registerSettings, getShowDuringCombat } from "./settings.js";
+import { registerSettings } from "./settings.js";
 
 // Initialize module
 Hooks.once("init", async () => {
@@ -27,36 +27,28 @@ Hooks.once("init", async () => {
 });
 
 Hooks.on("refreshToken", (token) => {
-  if (canvas.tokens.highlightObjects) return;
-
-  const showForCombat = getShowDuringCombat() && isCombatRunning();
-  if (showForCombat) return;
-
-  setEffectVisibility(token, token.hover);
+  //if (canvas.tokens.highlightObjects) return;
+  refreshEffectVisibility(token);
 });
 
 Hooks.on("highlightObjects", (state) => {
-  const showForCombat = getShowDuringCombat() && isCombatRunning();
-  if (showForCombat) return;
+  //const showForCombat = getShowDuringCombat() && isCombatRunning();
+  //if (showForCombat) return;
 
   for (const token of canvas.tokens.placeables) {
-    setEffectVisibility(token, state);
+    refreshEffectVisibility(token);
+    //setEffectVisibility(token, state);
   }
 });
 
 Hooks.on("combatStart", () => {
-  if (!getShowDuringCombat()) return;
-
   for (const token of canvas.tokens.placeables) {
-    setEffectVisibility(token, true);
+    refreshEffectVisibility(token);
   }
 });
 
 Hooks.on("deleteCombat", () => {
-  if (!getShowDuringCombat()) return;
-
   for (const token of canvas.tokens.placeables) {
-    if (token.hover) continue; // Don't remove effects from hovered tokens
-    setEffectVisibility(token, false);
+    refreshEffectVisibility(token);
   }
 });
