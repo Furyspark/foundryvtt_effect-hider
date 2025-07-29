@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "effect-hider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hides token effects in FoundryVTT",
   "license": "MIT",
   "homepage": "https://github.com/Furyspark/foundryvtt_effect-hider",
