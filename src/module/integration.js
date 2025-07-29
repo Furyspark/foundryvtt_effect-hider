@@ -7,6 +7,10 @@ const moduleRules = [
     id: "pathfinder-ui",
     skipBackground: true,
   },
+  {
+    id: "pf2e-effects-halo",
+    skipBackground: true,
+  },
 ];
 
 export const renderRules = {
